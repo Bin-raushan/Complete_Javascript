@@ -1,6 +1,6 @@
-// variables: Js variables are containers for storing data values
+// variables: Js variables are containers for storing data values.
 
-// ways to create variables
+// ways to create variables : let, var, const
 
 // 1.) Let 
 // It is scoped variable
