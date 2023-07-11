@@ -1,5 +1,8 @@
 // Console objects are used to see ouput on console
 
+// we can prints entire console objects on console using
+console.log(console);
+
 // 1.)log() shows informantion on console
 console.log("Hey, I am mtrying too print message onconsole");
 
@@ -25,6 +28,8 @@ console.log(student); // prints entire student deatis
 console.log(student.name); // print student name
 
 console.table(student); // prints entire students details in table format
+
+// 7.) asert() // it is used to check codition , if true then no issue, if false then gives error
 
 
 // Note: Reffer to https://developer.mozilla.org/en-US/docs/Web/API/console  for all console objects
