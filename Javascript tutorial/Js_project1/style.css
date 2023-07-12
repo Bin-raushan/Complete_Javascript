@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#set1{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+   
+  
+}
+#set2{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    display: none;
+    text-align: center;
+
+}
+.btn{
+    text-align: center;
+    margin-top: 25px;
+}
+.img_con{
+    display: flex;
+    justify-content: center;
+}
+button{
+    margin: 5px;
+}
+#onOff{
+    width: 30px;
+}

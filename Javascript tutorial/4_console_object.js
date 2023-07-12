@@ -34,3 +34,23 @@ console.table(student); // prints entire students details in table format
 
 // Note: Reffer to https://developer.mozilla.org/en-US/docs/Web/API/console  for all console objects
 
+
+
+// Window object, BOM, And DOM
+
+// window object:
+//  window object represent browser window and provides method to control it.
+// it is a global object.
+// Window object has three parts: i) DOM, ii.)BOM, iii.)Javascript core
+
+// i.) DOM :- Document object model
+// DOM represent the page content as html.
+// document.body() -> entire body get converted into javascript object
+// document.body.style.background="green" -> page backgroung becomes green
+
+// ii.) BOM :- Browser object model
+// BOM represents additional object provided by the browser (host enviornment) for
+// working with everything except the document
+// The function alert/prompt/confirm are also the part of BOM
+// location.href="https://www.google.com"; -> this can redirect to page on google.com page
+
