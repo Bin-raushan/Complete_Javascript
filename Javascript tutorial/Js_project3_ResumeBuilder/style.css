@@ -1,0 +1,37 @@
+/* write css here */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body{
+    background-color:rgb(174, 179, 184);
+} */
+#intro{
+    font: 1.3em sans-serif;
+    text-decoration:underline;
+}
+/* #resume-form{
+    display: none;
+} */
+#resume-template{
+    display:none;
+}
+
+.defimg{
+    /* border: 1px solid red; */
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+}
+.background1{
+    background-color:lightgrey;
+}
+.background2{
+    
+    
+    background-color:bisque;
+}
+.card-bg{
+    background-color:antiquewhite;
+}

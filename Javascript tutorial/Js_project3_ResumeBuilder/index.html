@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick Resume Builder</title>
+    <link rel="shortcut icon" href="./favicon.png.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" >
+</head>
+
+<body>
+    <!-- Write Html code here -->
+
+    <!-- resume-form code -->
+    <div class="container" id="resume-form">
+        <div class="container text-center mt-2" id>
+            <h1>Resume Builder</h1>
+            <p id="intro">By Raushan Roy.</p>
+            <hr>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- left column -->
+
+                    <h3>Personal Information</h3>
+
+                    <div class="form-group my-2">
+                        <label for="name"><b>Your Name</b> </label>
+                        <input class="form-control" id="name" placeholder="Enter Your Name" type="text" required>
+
+                    </div>
+                    <!-- about box -->
+                    <div class="form-group my-2">
+                        <label for="address"><b>About</b> </label>
+                        <textarea rows="3" class="form-control" id="about"
+                            placeholder="Write About Yourself"></textarea>
+                    </div>
+
+                    <!-- image file -->
+                    <div class="form-group my-2">
+                        <label for="image"><b>Select Your Image</b> </label>
+                        <input class="form-control" id="image" placeholder="Select Your image" type="file">
+
+                    </div>
+
+                    <div class="form-group my-2">
+                        <label for="contact"><b>Your Contact</b> </label>
+                        <input class="form-control" id="contact" placeholder="Enter Your Mobile Number" type="text">
+
+                    </div>
+                    <div class="form-group my-2">
+                        <label for="email"><b>Your Email</b> </label>
+                        <input class="form-control" id="email" placeholder="Enter Your Email Address" type="email">
+
+                    </div>
+                    <div class="form-group my-2">
+                        <label for="address"><b>Your Address</b> </label>
+                        <textarea rows="3" class="form-control" id="adress"
+                            placeholder="Enter Your full Address"></textarea>
+                    </div>
+
+                    <p class="mt-4 text-secondary "><b>Social Media Accounts</b></p>
+
+                    <div class="form-group my-2">
+                        <label for="linkedin"><b>LinkedIn Account</b> </label>
+                        <input class="form-control" id="linkedin" placeholder="Enter Your LinkedIn Id" type="url">
+
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="github"><b>Github Accounts</b> </label>
+                        <input class="form-control" id="github" placeholder="Enter Your GitHub Id" type="url">
+
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="others"><b>Your Website</b> </label>
+                        <input class="form-control" id="others" placeholder="Enter Your website" type="url">
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Right column -->
+                    <h3>Professional Information</h3>
+
+                    <div class="form-group my-2">
+                        <label for="objective"><b> Career Objective</b> </label>
+                        <textarea class="form-control" id="objective" rows="3"
+                            placeholder="Write Your Career Objective"></textarea>
+                    </div>
+
+                    <div class="form-group mt-2" id="we">
+                        <label for="workexp"><b>Work Expirience</b> </label>
+                        <textarea rows="3" class="form-control workexp" placeholder="Your Work Experience"></textarea>
+
+                        <!-- adding textarea dynamically -->
+
+
+                        <!-- Adding Button  -->
+                        <div class="container text-end" id="addWorkExp">
+                            <button onclick="addNewWexp()" class="btn btn-primary btn-sm mt-2">Add</button>
+
+
+                            <!-- delete button on hold -->
+                            <!-- <button onclick="deleteNewWexp()" class="btn btn-secondary btn-sm mt-2 " >Delete</button> -->
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="form-group mt-2" id="aq">
+                        <label for="aqf"><b>Academic Qualification</b> </label>
+                        <textarea rows="3" class="form-control aqf" placeholder="10th, CBSE Board, 75%  (2010-2011)"></textarea>
+                        <!-- Adding Button  -->
+                        <div class="container text-end" id="addAqf">
+                            <button onclick="addNewAq()" class="btn btn-primary btn-sm mt-2">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2" id="pr">
+                        <label for="Projects"><b>Projects</b> </label>
+                        <textarea rows="3" class="form-control Projects" placeholder="Your Projects"></textarea>
+                        <!-- Adding Button  -->
+                        <div class="container text-end" id=addProject>
+                            <button onclick="addNewpro()" class="btn btn-primary btn-sm mt-2">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2" id="sk">
+                        <label for="skill"><b>Skills</b> </label>
+                        <textarea class="form-control skill" placeholder="Your Skills"></textarea>
+                        <!-- Adding Button  -->
+                        <div class="container text-end" id="addSkill">
+                            <button onclick="addNewSkill()" class="btn btn-primary btn-sm mt-2">Add</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Generate Resume button -->
+            <div class="container text-center my-4">
+                <button onclick="generateResume()" class="btn btn-primary btn-lg">Generate Resume</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- resume-template code -->
+    <div class="container" id="resume-template">
+        <div class="row">
+            <!-- left-column -->
+            <div class="col-md-4 text-center  py-4 background1 ">
+                <img src="./default_img.png" alt="" class="img-fluid defimg" id="imageT">
+                <div class="container">
+                    <p id="nameT1" style="font-weight:800; text-decoration: underline;">Mr. John DEY</p>
+                    <p id="aboutT" style="font-weight: 500;">I am a Web Developer, Programmer.</p>
+                    <p id="contactT"><i class="fas fa-phone"></i> +919845239032, +918877449643</p>
+                    <p id="emailT"><i class="fas fa-envelope"></i> deyjohn123@gmail.com</p>
+                    <p id="adressT"><i class="fa-solid fa-location-dot"></i> 1st floor Shreeram Bhavan Mumbai, India </p>
+
+                    <hr>
+                    <p><i class="fa-brands fa-linkedin"></i> <a id="linkedinT" href="#"> <b>http://www.Linkdin.com</b> </a></p>
+                    <p><i class="fa-brands fa-github"></i> <a id="githubT" href="#"><b>http://www.GitHub.com</b> </a></p>
+                    <p><a id="othersT" href="#"><b>http://www.your portfolio.com</b> </a></p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-8 text-start py-4 background2">
+                <!-- Right column -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 900;">Mr.John DEY</h1>
+                <div class="card mt-4">
+                    <div class="card-header card-bg">
+                        <h3> Career Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, corrupti laudantium
+                            explicabo sapiente inventore ducimus, soluta aperiam dolor temporibus similique nostrum
+                            vitae fugit! Nihil sit reprehenderit earum? Excepturi eaque rem nam, eos dicta totam
+                            pariatur fuga vitae accusantium corporis illum voluptatibus, repellendus harum voluptas. Nam
+                            veritatis magni dolore voluptatem maxime?</p>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header card-bg">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol id="workexpT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        </ol>
+
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header card-bg">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqfT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header card-bg">
+                        <h3>Projects</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol id="projectsT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header card-bg">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol id="skillT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="container text-center my-4">
+                <button onclick="printResume()" class="btn btn-primary btn-lg">Print Resume</button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <!-- linking of js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -42,6 +42,24 @@ console.table(student); // prints entire students details in table format
 //  window object represent browser window and provides method to control it.
 // it is a global object.
 // Window object has three parts: i) DOM, ii.)BOM, iii.)Javascript core
+// Some important properties and method of window objects:
+// alert(), prompt(), document, confirm(), open(), close(), moveto(), location, history, innerHeight, outerHeight
+// we can also use these propert using window.propertyName/method or without writing window.
+// ex: window.alert("hi"), window.document.title. prompt("")
+
+// location object :-> can be used to get the current page address and redirect the browser to a new page
+// window.location()
+// .loction.href // returns the url of the current page
+// .location.pathname // return the path and file name of current object
+// .location.hostname // return the domain name of the web host
+// .location.assign() //loads a new document
+// .location.protocol // return the web protocol used (http: or https
+// .location.port // retuns number of internet host port
+
+
+// Hostory object :-> history object contain browser history and used to perform operations with browser history
+// history.back()
+// history.forward()
 
 // i.) DOM :- Document object model
 // DOM represent the page content as html.
@@ -53,4 +71,7 @@ console.table(student); // prints entire students details in table format
 // working with everything except the document
 // The function alert/prompt/confirm are also the part of BOM
 // location.href="https://www.google.com"; -> this can redirect to page on google.com page
+
+
+// NOTE: NodeJs Does not support window objects
 
